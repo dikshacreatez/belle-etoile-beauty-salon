@@ -1,0 +1,497 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #2d2522;
+            background: #f8f3ee;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR */
+
+        header {
+            padding: 20px 6%;
+            background: #f8f3ee;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav h2 {
+            font-family: Georgia, serif;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #9b735d;
+        }
+
+        .book-btn,
+        .hero-btn {
+            background: #2d2522;
+            color: white;
+            padding: 13px 22px;
+            border-radius: 2px;
+        }
+
+        .book-btn:hover,
+        .hero-btn:hover {
+            background: #9b735d;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 50px 6%;
+            gap: 60px;
+        }
+
+        .hero-content {
+            width: 50%;
+        }
+
+        .hero-content p:first-child {
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 6vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            max-width: 450px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 50%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            padding: 100px 10%;
+            background: #eee3da;
+        }
+
+        .about img {
+            width: 450px;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        .about-content {
+            max-width: 500px;
+        }
+
+        .about-content>p:first-child,
+        .services>p,
+        .gallery>p,
+        .contact>p {
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .about-content h2,
+        .services h2,
+        .gallery h2,
+        .contact h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .about-content a {
+            border-bottom: 1px solid #2d2522;
+            padding-bottom: 5px;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            text-align: center;
+            padding: 100px 8%;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 45px 30px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+        }
+
+
+        /* GALLERY */
+
+        .gallery {
+            text-align: center;
+            padding: 100px 6%;
+            background: #eee3da;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 45px;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .contact h2 {
+            font-size: 50px;
+        }
+
+        .contact p {
+            margin-bottom: 30px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            background: #2d2522;
+            color: white;
+            padding: 45px 20px;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 8px;
+            opacity: 0.8;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .book-btn {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding-top: 30px;
+            }
+
+            .hero-content,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-image img {
+                height: 450px;
+            }
+
+            .about {
+                flex-direction: column;
+                padding: 70px 8%;
+            }
+
+            .about img {
+                width: 100%;
+                height: 450px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-container img {
+                height: 250px;
+            }
+
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #f8f3ee;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 25px;
+                z-index: 10;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        /* APPOINTMENT FORM */
+
+        .appointmentForm {
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
+
+        #appointmentForm {
+            max-width: 600px;
+            margin: 40px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #appointmentForm input,
+        #appointmentForm select {
+            padding: 16px;
+            border: 1px solid #d8c9bd;
+            background: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        #appointmentForm input:focus,
+        #appointmentForm select:focus {
+            border-color: #9b735d;
+        }
+
+        #appointmentForm button {
+            padding: 16px;
+            border: none;
+            background: #2d2522;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #appointmentForm button:hover {
+            background: #9b735d;
+        }
+
+        #formMessage {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+
+            .hero {
+                padding: 35px 6%;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-image img {
+                height: 400px;
+            }
+
+            .about-content h2,
+            .services h2,
+            .gallery h2,
+            .contact h2 {
+                font-size: 36px;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-container img {
+                height: 350px;
+            }
+
+            #appointmentForm {
+                width: 100%;
+            }
+        }
+
+        /* EXTRA HOVER & ANIMATIONS */
+
+        /* Navbar links */
+        .nav-links a {
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #9b735d;
+            transform: translateY(-2px);
+        }
+
+
+        /* Buttons */
+        .book-btn,
+        .hero-btn,
+        #appointmentForm button {
+            transition: 0.3s ease;
+        }
+
+        .book-btn:hover,
+        .hero-btn:hover,
+        #appointmentForm button:hover {
+            background: #9b735d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(45, 37, 34, 0.15);
+        }
+
+
+        /* Service cards */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(45, 37, 34, 0.12);
+        }
+
+
+        /* Gallery images */
+        .gallery-container img {
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.04);
+        }
+
+
+        /* Hero image */
+        .hero-image img {
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* Page load animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeUp 1s ease;
+        }
+
+        .hero-image {
+            animation: fadeUp 1.2s ease;
+        }
